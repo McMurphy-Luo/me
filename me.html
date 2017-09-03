@@ -12,8 +12,8 @@
             }
             html{
                 font-size: 14px;
-                font-family: "Segoe UI", "Microsoft YaHei UI", Arial, "SimSun", sans-serif;
-                color: #111;
+                font-family: Arial, "Microsoft Yahei", sans-serif;
+                color: #222;
                 height: 100%;
             }
             body{
@@ -24,7 +24,7 @@
             }
             a{
                 text-decoration: none;
-                color: #111;
+                color: #222;
             }
             /* css reset end */
 
@@ -34,6 +34,14 @@
             .grid-21, .grid-22, .grid-23, .grid-24{
                 float: left;
                 box-sizing: border-box;
+            }
+            .container-g-24:after{
+                content:".";
+                clear:both;
+                display:block;
+                height:0;
+                overflow:hidden;
+                visibility:hidden;
             }
             .container-g-24 .grid-0{
                 display: none;
@@ -119,23 +127,55 @@
             .g-f-right{
                 float: right;
             }
+            .g-f-left{
+                float: left;
+            }
             .g-t-right{
                 text-align: right;
             }
             .g-t-center{
                 text-align: center;
             }
+            .clear{
+                clear:both;
+            }
             /* global utility class */
 
             /* business logic 用的类 */
+            header{
+                text-align: center;
+                font-weight: bold;
+                font-size: 1.5em;
+            }
+            header a{
+                color: #525252;
+            }
+            .h-chinese-char{
+                letter-spacing: 0.2em;
+            }
+
+
+            .basic-info{
+                line-height: 2em;
+            }
+            .basic-info a{
+                text-decoration: underline;
+            }
             .section{
+                border-top: 2px solid rgb(115, 165, 195);
                 margin-top: 1em;
             }
             .s-title{
-
+                text-align: center;
+                line-height: 2em;
+                background: rgb(115, 165, 195);
+                font-size: 1.4em;
+                color: white;
+                letter-spacing: 0.2em;
+                font-weight: 600;
             }
             .s-content{
-                padding-left: 5em;
+                padding-left: 1em;
             }
             .experience{
                 margin-top: 0.5em;
@@ -144,21 +184,32 @@
         </style>
     </head>
     <body>
-        <header><a href="https://github.com/McMurphy-Luo">罗嘉毅 | McMurphy.Luo</a></header>
-        <div class="section">
-            <div class="s-title">基本信息 | Basic Info</div>
-            <div class="s-content">
-                出生年月：1992-10-26<br>
-                籍　　贯：浙江省余姚市<br>
-                现居地址：浙江省杭州市<br>
-                毕业院校：中国海洋大学<br>
-                最高学历：本科<br>
-                联系方式：+86-15990016493
+        <br>
+        <br>
+        <header>
+            <a href="https://github.com/McMurphy-Luo"><span class="h-chinese-char">罗嘉毅</span> | <span class="h-english-char">McMurphy.Luo</span></a>
+        </header>
+
+        <div class="section container-g-24">
+            <div class="s-title grid-4">基本信息</div>
+            <div class="s-content grid-18 container-g-24">
+                <div class="grid-12 basic-info">
+                    出生年月：1992-10-26<br>
+                    籍　　贯：浙江省余姚市<br>
+                    现居地址：浙江省杭州市<br>
+                    github：&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/McMurphy-Luo">https://github.com/McMurphy-Luo</a>
+                </div>
+                <div class="grid-12 basic-info">
+                    毕业院校：中国海洋大学<br>
+                    最高学历：本科<br>
+                    联系方式：+86-15990016493<br>
+                    Email: McMurphy.luo@gmail.com
+                </div>
             </div>
         </div>
-        <div class="section">
-            <div class="s-title">履　　历 | Personal Experience</div>
-            <div class="s-content">
+        <div class="section container-g-24">
+            <div class="s-title grid-4">履　　历</div>
+            <div class="s-content grid-20">
                 <div class="experience container-g-24">
                     <div class="e-time grid-8">
                         2016-03-12 ------- 至今
@@ -166,7 +217,6 @@
                     <div class="e-place grid-16 g-t-right">
                         杭州海康威视数字技术股份有限公司
                     </div>
-                    <div class="clear"></div>
                 </div>
                 <div class="experience container-g-24">
                     <div class="e-time grid-8">
@@ -175,25 +225,28 @@
                     <div class="e-place grid-16 g-t-right">
                         珠海市魅族科技有限公司
                     </div>
-                    <div class="clear"></div>
                 </div>
             </div>
         </div>
-        <div class="section">
-            <div class="s-title">项目经验 | Project Experience</div>
-            <div class="s-content">
-                dsfsdfsdfsdfdfsdfsdfasdfadsfdsadf
+        <div class="section container-g-24">
+            <div class="s-title grid-4">项目经验</div>
+            <div class="s-content grid-20">
+                <ul>
+                    <li>
+                        嵌入式设备控件开发：海康是嵌入式设备生产厂家，其生产的设备（IP Camera，NVR，路由器等等）需要一个随设备搭载的客户端，用Web实现。没见过的同学可以想象成路由器的Web界面，俗称控件，不过比之路由器的Web要复杂的多。整个团队维护公司所有设备的控件，不同的设备控件不同，随设备升级，添加新的功能，或者根据客户的需求做OEM。<br>技术成份上是Web前端和c++混合开发。前端部分属于Web APP形式，由于设备是C语言，没有模板引擎，只有简单http服务器的功能，外加XML数据格式的http接口。前端架构上采用angularjs，停留在1.2*的版本兼容IE8。功能主要就是发发Ajax请求配置设备各种各样的参数，从简单的IP地址，端口，到复杂的PTZ，场景，时间计划，专业智能等等。
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="section">
-            <div class="s-title">专业知识 | Knowledge</div>
-            <div class="s-content">
+        <div class="section container-g-24">
+            <div class="s-title grid-4">专业知识</div>
+            <div class="s-content grid-20">
                 asdasdasdasdasdasd
             </div>
         </div>
-        <div class="section">
-            <div class="s-title">学术方向 | Academic Research</div>
-            <div class="s-content">
+        <div class="section container-g-24">
+            <div class="s-title grid-4">学术方向</div>
+            <div class="s-content grid-20">
                 多媒体技术，视音频编码，数字图像处理
             </div>
         </div>
