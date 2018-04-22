@@ -17,13 +17,12 @@
                 height: 100%;
             }
             body{
-                height: 100%;
                 max-width: 800px;
                 min-width: 400px;
-                margin: 0 auto;
+                margin: 0 auto 10em auto;
             }
             a{
-                text-decoration: none;
+                text-decoration: underline;
                 color: #222;
             }
             /* css reset end */
@@ -161,7 +160,7 @@
             }
             .section{
                 border-top: 2px solid rgb(115, 165, 195);
-                margin-top: 1em;
+                margin-top: 2em;
             }
             .s-title{
                 text-align: center;
@@ -175,8 +174,12 @@
             .s-content{
                 padding-left: 1em;
             }
-            .experience{
+            .p-desc,.knowledge-item,.research-item,.o-item{
+                margin-bottom: 1em;
+            }
+            .p-desc p, .experience{
                 margin-top: 0.5em;
+                margin-bottom: 0.5em;
             }
             /* business logic end */
         </style>
@@ -200,7 +203,7 @@
                     毕业院校：中国海洋大学<br>
                     最高学历：本科<br>
                     联系方式：+86-15990016493<br>
-                    Email: McMurphy.luo@gmail.com
+                    Email: McMurphy.luo@gmail.com<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mcmurphy_luo@163.com
                 </div>
             </div>
         </div>
@@ -230,26 +233,44 @@
             <div class="s-content grid-20">
                 <ul class="project-list">
                     <li class="p-desc">
-                        2016-03-12----至今：
-                        <br>
-                        嵌入式设备控件开发。
-                        海康是嵌入式设备生产厂家，其生产的设备（IP Camera，NVR，路由器等等）需要一个随设备搭载的客户端，用Web实现。
-                        没见过的同学可以想象成路由器的Web界面，俗称控件，不过比之路由器的Web要复杂的多。
-                        整个团队维护公司所有设备的控件，不同的设备控件不同，控件版本随设备升级，添加新的功能，或者根据客户的需求做OEM。
-                        <br>
-                        技术成份上是Web前端和c++混合开发。前端部分属于Web APP形式，由于设备是C语言，没有模板引擎，
-                        只有简单http服务器的功能，外加XML数据格式的http接口和音视频取流的接口。
-                        c++的部分是IE ActiveX插件和Mozilla NPAPI插件，插件实现实时取流，解码，播放，暂停，回放，单帧播放，倒放，快放，最高256倍速快放，
-                        最多支持16路同时开启播放。解码的部分是公司共用的解码库，输入h265,h264,甚至是魔改的非标准码流，输出图像帧。
-                        音频也是支持的。自己组的代码主要是负责网络通信，本地文件读写，Native窗口创建，矢量图绘制。
-                        <br>
-                        外加各种各样的脚本，提升工作效率。
+                        <p>
+                            <b>2016-03-12----至今：嵌入式设备控件开发:</b>
+                        </p>
+                        <p>
+                        　　海康是嵌入式设备生产厂家，其生产的设备（IP Camera，NVR，路由器等等）需要一个随设备搭载的客户端，用Web实现。
+                        没见过的同学可以想象成路由器的Web界面，俗称控件。
+                        </p>
+                        <p>
+                        　　技术成份上是Web前端和c++混编
+                        </p>
+                        <p>
+                        　　C++的部分实现取流、解码、播放、暂停，回放，单帧播放，倒放，快放，最高16倍速快慢放，最多支持16路同时开启播放。
+                            解码的部分是公司共用的解码库，改自Ffmpeg，输入h265，h264，甚至是魔改的非标准码流，输出图像帧;
+                            自己组的代码主要是负责网络通信，多线程处理，加解密，本地文件读写，Native窗口创建，矢量图绘制，用户交互处理。
+                        </p>
+                        <p>
+                        　　有一些简单的算法。判断点在多变型内部等等。
+                        </p>
                     </li>
-                    <li class="p-item">
-                        2015-08-01----2016-03-01：
-                        <br>
-                        魅族商城开发(<a href="https://store.meizu.com">https://store.meizu.com</a>)，主要负责商城后台的开发，商城后台类似一个ERP系统，
-                        有比较复杂管理配置界面。当时主要负责后台的前端开发。Javascript，前端的一些技术栈，有Backbone，Underscore，Gulp，Bootstrap等等。
+                    <li class="p-desc">
+                        <p>
+                            <b>2015-08-01----至今：公司各种内部系统开发</b>
+                        </p>
+                        <p>
+                        　　公司一些内部系统开发，电商管理后台开发，项目管理系统开发，主要用到Java，Java的各种框架和库，NodeJS，NodeJS的各种框架和库。
+                            Mysql数据库，Redis等等，非常常见的服务端架构。外带各种Web前端的框架和库。
+                        </p>
+                    </li>
+                    <li class="p-desc">
+                        <p>
+                            <b>2015-08-01以前：上大学时候给人家做的外包系统</b>
+                        </p>
+                        <p>
+
+                            <a href="http://polaroceanportal.com/">极地与海洋门户</a>
+                            <br>
+                            <a href="http://www.ouc.edu.cn/mcd">海洋文化创意设计大赛</a>
+                        </p>
                     </li>
                 </ul>
             </div>
@@ -259,26 +280,26 @@
             <div class="s-content grid-20">
                 <ul class="knowledge-list">
                     <li class="knowledge-item">
-                        <b>Common：</b>微机原理，数据结构，C，C++，JAVA，计算机体系结构，计算机网络，计算机操作系统，数据库技术与应用，编译原理，
-                        设计模式，各种编程范式、最佳实践等等，线性代数，概率论，微积分
+                        <b>Common：</b>微机原理，数据结构，C，C++，JAVA，计算机体系结构，算法，计算机网络，计算机操作系统，数据库技术与应用，编译原理，
+                        设计模式，各种编程范式、最佳实践等等，线性代数，概率论，微积分。
                     </li>
                     <li class="knowledge-item">
                         <b>C++：</b>
-                        C++11标准库，STL，inet/*.h，unistd.h，Windows.h，d2d1.h，MFC，boost/noncopyable.hpp，winsock2.h
-                        《Effective C++》 《More Effective C++》 《STL源码剖析》《Google C++ Style Guide》
-                        cppreference.com 《unix环境高级编程》《unix环境网络编程》《inside c++ object model》
+                        C++11标准库，STL，inet/*.h，unistd.h，Windows.h，d2d1.h，MFC，boost/noncopyable.hpp，winsock2.h，QObject，QWidget，QJsonDocument，
+                        QString，Gdiplus.h，《Effective C++》 《More Effective C++》 《STL源码剖析》 《Google C++ Style Guide》
+                        cppreference.com 《unix环境高级编程》 《unix环境网络编程》 《inside c++ object model》
                         《windows核心编程》
                     </li>
                     <li class="knowledge-item">
-                        <b>Java：</b>java.*，Maven，org.json.json，org.apache.logging.log4j，org.apache.poi
+                        <b>Java：</b>java.*，Maven，Spring，Tomcat，org.json.json，org.apache.logging.log4j，org.apache.poi，org.apache.commons
                     </li>
                     <li class="knowledge-item">
                         <b>Javascript：</b>
-                        Angular.js，Bootstrap，nodejs，gulp，Underscore，Jquery插件
+                        Vue，Angular.js，requirejs，Backbone，Bootstrap，NodeJs，gulp，Underscore/Lodash，Jquery，Jquery.fn
                     </li>
                     <li class="knowledge-item">
                         <b>Other：</b>
-                        python，bash/cmd，SQL，Unicode，regex，redis，Mysql，sqlite，makefile，CMake
+                        python，bash/cmd，SQL，Unicode，regex，redis，Mysql，sqlite，Makefile，CMake，QMake，Nginx
                     </li>
                 </ul>
             </div>
@@ -289,6 +310,22 @@
                 <ul class="research-list">
                     <li class="research-item">
                         <b>多媒体技术：</b>视音频编码，H264编码标准，JPEG文件格式标准，数字图像处理
+                    </li>
+                    <li class="research-item">
+                        <b>图像方面：</b>绘图，渲染，Transform
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section container-g-24">
+            <div class="s-title grid-4">其　　它</div>
+            <div class="s-content grid-20">
+                <ul class="other-list">
+                    <li class="o-item">
+                        <b>薪资要求：</b>20K/月
+                    </li>
+                    <li class="o-item">
+                        <b>其他：</b>2016年 Hikvision编程大赛60名
                     </li>
                 </ul>
             </div>
