@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>McMurphy.Luo</title>
+  <style>
+    /* css reset 样式重置 */
+    html,
+    body {
+      margin: 0;
+    }
+
+    html {
+      font-size: 14px;
+      font-family: sans-serif;
+      color: #222;
+      height: 100%;
+    }
+
+    body {
+      max-width: 800px;
+      min-width: 400px;
+      padding: 0;
+      padding-bottom: 5em;
+      margin: 0 auto 10em auto;
+    }
+
+    a {
+      text-decoration: underline;
+      color: #222;
+    }
+
+    /* css reset end */
+
+    /* grid system 简易的栅格布局系统 */
+    .container-g-24 .grid-0,
+    .grid-1,
+    .grid-2,
+    .grid-3,
+    .grid-4,
+    .grid-5,
+    .grid-6,
+    .grid-7,
+    .grid-8,
+    .grid-9,
+    .grid-10,
+    .grid-11,
+    .grid-12,
+    .grid-13,
+    .grid-14,
+    .grid-15,
+    .grid-16,
+    .grid-17,
+    .grid-18,
+    .grid-19,
+    .grid-20,
+    .grid-21,
+    .grid-22,
+    .grid-23,
+    .grid-24 {
+      float: left;
+      box-sizing: border-box;
+    }
+
+    .container-g-24:after {
+      content: ".";
+      clear: both;
+      display: block;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+    }
+
+    .container-g-24 .grid-0 {
+      display: none;
+    }
+
+    .container-g-24 .grid-1 {
+      width: 4.16%;
+    }
+
+    .container-g-24 .grid-2 {
+      width: 8.33%;
+    }
+
+    .container-g-24 .grid-3 {
+      width: 12.5%;
+    }
+
+    .container-g-24 .grid-4 {
+      width: 16.66%;
+    }
+
+    .container-g-24 .grid-5 {
+      width: 20.83%;
+    }
+
+    .container-g-24 .grid-6 {
+      width: 25%;
+    }
+
+    .container-g-24 .grid-7 {
+      width: 29.16%;
+    }
+
+    .container-g-24 .grid-8 {
+      width: 33.33%;
+    }
+
+    .container-g-24 .grid-9 {
+      width: 37.5%;
+    }
+
+    .container-g-24 .grid-10 {
+      width: 41.66%;
+    }
+
+    .container-g-24 .grid-11 {
+      width: 45.83%;
+    }
+
+    .container-g-24 .grid-12 {
+      width: 50%;
+    }
+
+    .container-g-24 .grid-13 {
+      width: 54.16%;
+    }
+
+    .container-g-24 .grid-14 {
+      width: 58.33%;
+    }
+
+    .container-g-24 .grid-15 {
+      width: 62.5%;
+    }
+
+    .container-g-24 .grid-16 {
+      width: 66.66%;
+    }
+
+    .container-g-24 .grid-17 {
+      width: 70.83%;
+    }
+
+    .container-g-24 .grid-18 {
+      width: 75%;
+    }
+
+    .container-g-24 .grid-19 {
+      width: 79.16%;
+    }
+
+    .container-g-24 .grid-20 {
+      width: 83.33%;
+    }
+
+    .container-g-24 .grid-21 {
+      width: 87.5%;
+    }
+
+    .container-g-24 .grid-22 {
+      width: 91.66%;
+    }
+
+    .container-g-24 .grid-23 {
+      width: 95.83%;
+    }
+
+    .container-g-24 .grid-24 {
+      width: 100%;
+    }
+
+    .clear {
+      clear: both;
+    }
+
+    /* grid system end */
+
+    /* global utility class 全局用的css元子类 */
+    .g-f-right {
+      float: right;
+    }
+
+    .g-f-left {
+      float: left;
+    }
+
+    .g-t-right {
+      text-align: right;
+    }
+
+    .g-t-center {
+      text-align: center;
+    }
+
+    .clear {
+      clear: both;
+    }
+
+    /* global utility class */
+
+    /* business logic 用的类 */
+    header {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+
+    header a {
+      color: #525252;
+    }
+
+    .h-chinese-char {
+      letter-spacing: 0.2em;
+    }
+
+    .basic-info {
+      line-height: 1.2em;
+      font-size:1.2em
+    }
+
+    .basic-info a {
+      text-decoration: underline;
+    }
+
+    .section {
+      border-top: 2px solid rgb(115, 165, 195);
+      margin-top: 2em;
+    }
+
+    .s-title {
+      text-align: center;
+      line-height: 2em;
+      background: rgb(115, 165, 195);
+      font-size: 1.4em;
+      color: white;
+      font-weight: 600;
+    }
+
+    .s-content {
+      padding-left: 1em;
+    }
+    
+    .project-list,
+    .knowledge-list,
+    .research-list{
+      padding-left: 1em;
+    }
+
+    .p-desc,
+    .knowledge-item,
+    .research-item {
+      margin-bottom: 1em;
+      font-size: 1.2em
+    }
+
+    .p-desc p,
+    .experience {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    /* business logic end */
+  </style>
+</head>
+
+<body>
+  <br>
+  <br>
+  <header>
+    <a href="https://github.com/McMurphy-Luo">
+      <span class="h-english-char">McMurphy.Luo</span>
+    </a>
+  </header>
+  <div class="section container-g-24">
+    <div class="s-title grid-4">PROFILE</div>
+    <div class="s-content grid-18 container-g-24">
+      <div class="grid-18 basic-info">
+        Contact Address: Room 546, Port Appartment, 288 Fengtan Road, Xihu District, HangZhou City, Zhejiang
+        Province, China
+        <br>Education: Bachelor of Marketing, Ocean University of China.
+        <br>Phone: +86-15990016493
+        <br>Email: McMurphy.luo@gmail.com
+        <br>Github: <a href="https://github.com/McMurphy-Luo">https://github.com/McMurphy-Luo</a>
+      </div>
+    </div>
+  </div>
+  <div class="section container-g-24">
+    <div class="s-title grid-4">EXPERIENCE</div>
+    <div class="s-content grid-20">
+      <ul class="project-list">
+        <li class="p-desc">
+          <p>
+            <b>
+              2018-06-2 --- Now: Zoom Video Communications
+              <br>Client Engineer:
+            </b>
+          </p>
+          <p>
+            Maintain and develop new features for Zoom Windows client. User uses its meeting/phone/chat feature by Zoom client. 
+            <br>
+            My job is maintaining the Zoom Phone part of Zoom Windows client.
+            Zoom Phone client is soft client IP phone. It relys on SIP protocol. The Windows client needs to fetch user configuration from web portal.
+            Display user interface. Register to SIP server. Send audio to server and decode audio received from server. Maintaining client cache.
+            <br>
+            User interfaces is implemented by pure raw Win32 API and lightweightly encapsulated by internal library.
+            Fetching user configuration is HTTPS requests to Zoom web. It relys on the CURL library.
+            It reads/writes local file systems. Majority of data maintained by client is stored by sqlite DB.
+            Zoom client adopts multi-process architechure. Its feature are distributed to several processes. Client make use of Inter-process communication technology
+            to call remote function.
+            <br>
+            Its audio codec is maintained by another codec team.
+          </p>
+          <p>
+            Key Points: Native Windows Programing. Crash Analysis. Large scale code base. Refactoring.
+          </p>
+        </li>
+        <li class="p-desc">
+          <p>
+            <b>
+              2016-03-12 --- 2018-06-01: Hangzhou Hikvision Digital Technology
+              <br>Client Engineer:
+            </b>
+          </p>
+          <p>
+            Hikvision is device vendor of IP Cameras, NVRs, routers etc. The firmware of thoses devices carrys a lightweight client
+            so that customer can use the device without install additional software. You download the client from the device web portal embed in firmware.
+            You may assume the web portal is similar to embed web of network routes.
+          </p>
+          <p>
+            The client is implemented by c++/javascript/html.
+          </p>
+          <p>
+            The c++ part of the client implements fetching video stream from device. Play/Pause the realtime video.
+            Additional it supports play by single frame, reverse play recoreded video, play video faster or slower for at most 16x speed.
+            It supports play 16 realtime video stream at the same time. Similar to you view 16 livestreams at the sametime.
+            The codec of the client is implemented by codec team of Hikvision company. The codec is based on FFmpeg.
+            <br>
+            My job is implement fetching video/audio from devices via network. Read/write local files.
+            Create UI windows. Draw vector images. Deal with user commands. The client UI is similar to video player plus vector image editor.
+            Besides, client needs to take care of multiple thread handling and encryption.
+          </p>
+          <p>
+            Algorithm relates to this project:
+            <br>
+            Example: How to determine if a point is in a polygon?
+            <br>For example. Given a polygon [{0,0}, {10,0}, {17,13}, {8,5}, {-1,2}].
+            Implement an function IsInPolygon(Point) that determine a point is within the bounded area of that polygon or not.
+          </p>
+        </li>
+        <li class="p-desc">
+          <p>
+            <b>Others: In-house tools development</b>
+          </p>
+          <p>
+            Develop some tools that are only used within the company
+          </p>
+        </li>
+        <li class="p-desc">
+          <p>
+            <b>Before 2015-08-01: Part-time development of some systems before graduation.</b>
+          </p>
+          <p>
+            Web Development: <a href="http://en.polaroceanportal.com/">Polar Ocean Portal</a>
+            <br>
+            Web Development: <a href="http://www.ouc.edu.cn/mcd">National University & Middle School Marine Culture Design Contest</a>
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="section container-g-24">
+    <div class="s-title grid-4">SKILLS</div>
+    <div class="s-content grid-20">
+      <ul class="knowledge-list">
+        <li class="knowledge-item">
+          <b>Common:</b>
+          Computer Architecture, Computer Network, Operating System, Algorithm and Data structures, Database System, Compiler Principle, C Progaming Language, C++ Programing Language, JAVA Programing Language,
+          Design Patterns, Linear Algebra, Calculus 
+        </li>
+        <li class="knowledge-item">
+          <b>C++:</b>
+          C++11 Standard Library, STL,inet/*.h, unistd.h, Windows.h, d2d1.h, MFC, boost/noncopyable.hpp, winsock2.h, QObject, QWidget, QJsonDocument,
+          QString, Gdiplus.h, curl.h, cppreference.com, &lt;Effective C++&gt;, &lt;More Effective C++&gt;, &lt;The Annotated STL Sources&gt;, &lt;Google C++ Style Guide&gt;,
+          &lt;Advanced Programing in the UNIX Environment&gt;, &lt;UNIX network Programing&gt;, &lt;Inside c++ Object Model&gt;,
+          &lt;Windows via C/C++&gt;
+        </li>
+        <li class="knowledge-item">
+          <b>Java:</b>java.*, Maven, Spring, Tomcat, org.json.json, org.apache.logging.log4j, org.apache.poi, org.apache.commons
+        </li>
+        <li class="knowledge-item">
+          <b>Javascript:</b>
+          Vue, Angular.js, requirejs, Backbone, Bootstrap, NodeJs, gulp, Underscore/Lodash, Jquery, Jquery.fn
+        </li>
+        <li class="knowledge-item">
+          <b>Others:</b>
+          python, bash/cmd, SQL, Unicode, regex, redis, Mysql, sqlite, Makefile, CMake, QMake, Nginx
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="section container-g-24">
+    <div class="s-title grid-4">ACADEMIC</div>
+    <div class="s-content grid-20">
+      <ul class="research-list">
+        <li class="research-item">
+          <b>Multimedia: </b>Codec of H.264, File format of JPEG file, Image processing
+        </li>
+        <li class="research-item">
+          <b>Realtime 2D Painting: </b>Rendering, Transforming, Applying effects.
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>
